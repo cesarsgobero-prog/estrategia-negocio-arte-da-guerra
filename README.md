@@ -1,5 +1,7 @@
 # Estratégia de Negócio — A Arte da Guerra
 
+**Português** · [English](README.en.md) · [Español](README.es.md)
+
 Skill para o [Claude Code](https://claude.com/claude-code) que aplica os princípios de *A Arte da Guerra* (Sun Tzu) a situações reais de negócio: negociação, concorrência, disputa contratual, licitação, venda, conflito com fornecedor ou sócio e entrada em mercado.
 
 ![Mapa mental — A Arte da Guerra](assets/mapa_mental_arte_da_guerra.png)
@@ -50,6 +52,8 @@ Depois, no Claude Code: `/arte-da-guerra` ou peça "o que Sun Tzu faria nessa ne
 skills/arte-da-guerra/
   SKILL.md                    # instruções da skill
   references/mapa-mental.md   # mapa dos 13 capítulos + tradução para negócios
+skills/art-of-war/            # versão em inglês
+skills/arte-de-la-guerra/     # versão em espanhol
 assets/                       # mapa mental em PNG e SVG (horizontal e celular) + PDF A3
 scripts/gerar_mapa.py         # gera o SVG/PNG (Python + Chrome headless)
 ```
