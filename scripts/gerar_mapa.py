@@ -161,8 +161,22 @@ def render(svg_text, name, w, h):
     print(png)
 
 
+def render_pdf_a3(name):
+    """Print the existing SVG to a single A3 landscape page (vector, via headless Chrome)."""
+    html = OUT_DIR / "_render.html"
+    pdf = OUT_DIR / f"{name}_A3.pdf"
+    html.write_text('<style>@page{size:A3 landscape;margin:0}body{margin:0}'
+                    'img{display:block;width:420mm;height:297mm;object-fit:contain}</style>'
+                    f'<img src="{name}.svg">', encoding="utf-8")
+    subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--no-pdf-header-footer",
+                    f"--print-to-pdf={pdf}", html.as_uri()], check=True)
+    html.unlink()
+    print(pdf)
+
+
 def main():
     render(build_svg(), "mapa_mental_arte_da_guerra", W, H)
+    render_pdf_a3("mapa_mental_arte_da_guerra")
     svg_text, vw, vh = build_svg_vertical()
     render(svg_text, "mapa_mental_arte_da_guerra_celular", vw, vh)
 
