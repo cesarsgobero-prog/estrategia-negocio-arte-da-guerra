@@ -1,0 +1,122 @@
+"""Generate the Art of War mind map as SVG and render it to PNG via headless Chrome."""
+import math
+import subprocess
+import textwrap
+from pathlib import Path
+
+OUT_DIR = Path(__file__).parent
+CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+W, H = 3400, 2400
+CX, CY = W / 2, H / 2
+RX, RY = 1330, 900
+CARD_W, WRAP = 400, 36
+FONT = "Segoe UI, Arial, sans-serif"
+
+CHAPTERS = [
+    ("1 · Planejamento", ["5 fatores: Caminho, Céu, Terra, Comandante, Método",
+                          "Comparar as forças antes de lutar",
+                          "Toda guerra se baseia no engano"]),
+    ("2 · Fazer a guerra", ["Guerra longa esgota o Estado",
+                            "Vitória rápida, não campanha longa",
+                            "Abastecer-se no território inimigo"]),
+    ("3 · Estratégia ofensiva", ["Vencer sem lutar é o ideal",
+                                 "Atacar a estratégia, depois as alianças, o exército e, por último, as cidades",
+                                 "Conhecer o inimigo e a si mesmo"]),
+    ("4 · Disposições", ["Primeiro tornar-se invencível",
+                         "Esperar a vulnerabilidade do inimigo",
+                         "Vencer antes de lutar"]),
+    ("5 · Energia", ["Forças diretas e indiretas",
+                     "Combinações infinitas",
+                     "Força do conjunto, não do indivíduo"]),
+    ("6 · Pontos fortes e fracos", ["Chegar primeiro e impor o terreno",
+                                    "Atacar onde o inimigo não defende",
+                                    "Adaptar-se como a água"]),
+    ("7 · Manobras", ["Transformar o desvio em atalho",
+                      "Comunicação: bandeiras e tambores",
+                      "Não atacar tropas descansadas ou motivadas"]),
+    ("8 · Variações táticas", ["Há ordens que não se obedecem",
+                               "Pesar vantagem e risco",
+                               "5 defeitos fatais do comandante"]),
+    ("9 · O exército em marcha", ["Ler os sinais do terreno e do inimigo",
+                                  "Disciplina com humanidade"]),
+    ("10 · Terreno", ["6 tipos de terreno",
+                      "6 causas de derrota que são culpa do comandante",
+                      "Cuidar dos soldados como filhos"]),
+    ("11 · As nove situações", ["Do terreno disperso ao terreno mortal",
+                                "Sem saída, a tropa luta com tudo",
+                                "Velocidade e surpresa"]),
+    ("12 · Ataque com fogo", ["5 alvos do fogo",
+                              "Não agir por raiva",
+                              "Mover-se só se houver vantagem"]),
+    ("13 · Espiões", ["Informação vale mais que batalhas",
+                      "5 tipos de espiões",
+                      "O agente duplo é o mais valioso"]),
+]
+
+
+def esc(s):
+    return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def card(x, y, title, items, hue):
+    lines = []
+    for it in items:
+        wrapped = textwrap.wrap(it, WRAP)
+        lines.append(("• " + wrapped[0], True))
+        lines += [("   " + w, False) for w in wrapped[1:]]
+    h = 70 + len(lines) * 30 + 18
+    left, top = x - CARD_W / 2, y - h / 2
+    color = f"hsl({hue},62%,42%)"
+    out = [
+        f'<rect x="{left}" y="{top}" width="{CARD_W}" height="{h}" rx="18" fill="hsl({hue},70%,97%)" stroke="{color}" stroke-width="3"/>',
+        f'<rect x="{left}" y="{top}" width="{CARD_W}" height="54" rx="18" fill="{color}"/>',
+        f'<rect x="{left}" y="{top + 36}" width="{CARD_W}" height="18" fill="{color}"/>',
+        f'<text x="{x}" y="{top + 36}" text-anchor="middle" font-size="25" font-weight="700" fill="#fff">{esc(title)}</text>',
+    ]
+    ty = top + 54 + 34
+    for text, _ in lines:
+        out.append(f'<text x="{left + 18}" y="{ty}" font-size="21" fill="#222" xml:space="preserve">{esc(text)}</text>')
+        ty += 30
+    return "\n".join(out)
+
+
+def build_svg():
+    parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" font-family="{FONT}">',
+             f'<rect width="{W}" height="{H}" fill="#faf7f0"/>']
+    n = len(CHAPTERS)
+    positions = []
+    for i in range(n):
+        ang = -math.pi / 2 + 2 * math.pi * i / n
+        positions.append((CX + RX * math.cos(ang), CY + RY * math.sin(ang)))
+    for i, (x, y) in enumerate(positions):
+        hue = int(360 * i / n)
+        mx, my = (CX + x) / 2, (CY + y) / 2
+        parts.append(f'<path d="M{CX},{CY} Q{mx + (y - CY) * 0.12},{my - (x - CX) * 0.12} {x},{y}" '
+                     f'stroke="hsl({hue},55%,55%)" stroke-width="7" fill="none" stroke-linecap="round"/>')
+    parts.append(f'<circle cx="{CX}" cy="{CY}" r="210" fill="#7a1f1f" stroke="#c9a227" stroke-width="10"/>')
+    parts.append(f'<text x="{CX}" y="{CY - 20}" text-anchor="middle" font-size="58" font-weight="800" fill="#fff">A Arte</text>')
+    parts.append(f'<text x="{CX}" y="{CY + 45}" text-anchor="middle" font-size="58" font-weight="800" fill="#fff">da Guerra</text>')
+    parts.append(f'<text x="{CX}" y="{CY + 105}" text-anchor="middle" font-size="34" fill="#f3e3a6">Sun Tzu</text>')
+    for i, ((title, items), (x, y)) in enumerate(zip(CHAPTERS, positions)):
+        parts.append(card(x, y, title, items, int(360 * i / n)))
+    parts.append(f'<text x="{W - 30}" y="{H - 25}" text-anchor="end" font-size="20" fill="#888">'
+                 'Resumo próprio · texto original em domínio público</text>')
+    parts.append("</svg>")
+    return "\n".join(parts)
+
+
+def main():
+    svg = OUT_DIR / "mapa_mental_arte_da_guerra.svg"
+    html = OUT_DIR / "_render.html"
+    png = OUT_DIR / "mapa_mental_arte_da_guerra.png"
+    svg.write_text(build_svg(), encoding="utf-8")
+    html.write_text(f'<body style="margin:0"><img src="{svg.name}" style="display:block;width:{W}px;height:{H}px">',
+                    encoding="utf-8")
+    subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars",
+                    f"--window-size={W},{H}", f"--screenshot={png}", html.as_uri()], check=True)
+    html.unlink()
+    print(png)
+
+
+if __name__ == "__main__":
+    main()
