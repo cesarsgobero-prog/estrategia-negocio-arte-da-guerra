@@ -11,6 +11,7 @@ Skill para o [Claude Code](https://claude.com/claude-code) que aplica os princí
 | "mapa mental da arte da guerra" | Mapa dos 13 capítulos (Mermaid) |
 | "explica o capítulo 6" | Ideias centrais + 2 aplicações em negócios |
 | "estratégia para renegociar com o fornecedor X" | Análise estratégica em 5 passos |
+| "analisa a disputa entre A e B" / eleição | **Modo observador**: os 5 passos aplicados aos dois lados, de forma simétrica e sem tomar partido |
 
 ### Análise em 5 passos
 
