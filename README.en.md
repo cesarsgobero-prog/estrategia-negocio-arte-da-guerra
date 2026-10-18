@@ -4,12 +4,10 @@
 
 A skill for [Claude Code](https://claude.com/claude-code) that applies the principles of *The Art of War* (Sun Tzu) to real business situations: negotiation, competition, contract disputes, public tenders, sales, conflicts with suppliers or partners, and market entry.
 
-![Mind map — The Art of War](assets/mapa_mental_arte_da_guerra.png)
+![Mind map — The Art of War](assets/mind_map_art_of_war.png)
 
-> The mind map images are labeled in Portuguese. The same content, in English, is in [`skills/art-of-war/references/mind-map.md`](skills/art-of-war/references/mind-map.md) (Mermaid).
-
-Vertical phone version: [`assets/mapa_mental_arte_da_guerra_celular.png`](assets/mapa_mental_arte_da_guerra_celular.png) (1080 px wide).
-For printing: [`assets/mapa_mental_arte_da_guerra_A3.pdf`](assets/mapa_mental_arte_da_guerra_A3.pdf) (A3 landscape, vector — print at actual size).
+Vertical phone version: [`assets/mind_map_art_of_war_phone.png`](assets/mind_map_art_of_war_phone.png) (1080 px wide).
+For printing: [`assets/mind_map_art_of_war_A3.pdf`](assets/mind_map_art_of_war_A3.pdf) (A3 landscape, vector — print at actual size).
 
 ## What the skill does
 
@@ -59,11 +57,11 @@ skills/
     SKILL.md                  # skill instructions
     references/mind-map.md    # map of the 13 chapters + business translation
   arte-de-la-guerra/          # Spanish
-assets/                       # mind map in PNG and SVG (landscape and phone) + A3 PDF
-scripts/gerar_mapa.py         # generates the SVG/PNG (Python + headless Chrome)
+assets/                       # mind map in PNG and SVG (landscape and phone) + A3 PDF, in pt/en/es
+scripts/gerar_mapa.py         # generates the SVG/PNG/PDF (Python + headless Chrome)
 ```
 
-To regenerate the image: `python scripts/gerar_mapa.py` (requires Google Chrome; adjust the `CHROME` path if needed).
+To regenerate the images: `python scripts/gerar_mapa.py en` (or `pt`, `es`; no argument = all). Requires Google Chrome; adjust the `CHROME` path if needed.
 
 ## Source
 

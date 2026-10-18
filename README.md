@@ -58,7 +58,7 @@ assets/                       # mapa mental em PNG e SVG (horizontal e celular) 
 scripts/gerar_mapa.py         # gera o SVG/PNG (Python + Chrome headless)
 ```
 
-Para regerar a imagem: `python scripts/gerar_mapa.py` (requer Google Chrome; ajuste o caminho em `CHROME` se necessário).
+Para regerar as imagens: `python scripts/gerar_mapa.py pt` (ou `en`, `es`; sem argumento = todos). Requer Google Chrome; ajuste o caminho em `CHROME` se necessário. As imagens em inglês e espanhol também ficam em `assets/`.
 
 ## Fonte
 

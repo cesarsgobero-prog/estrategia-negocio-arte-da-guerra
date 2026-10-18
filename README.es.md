@@ -4,12 +4,10 @@
 
 Skill para [Claude Code](https://claude.com/claude-code) que aplica los principios de *El Arte de la Guerra* (Sun Tzu) a situaciones reales de negocio: negociación, competencia, disputas contractuales, licitaciones, ventas, conflictos con proveedores o socios y entrada en mercados.
 
-![Mapa mental — El Arte de la Guerra](assets/mapa_mental_arte_da_guerra.png)
+![Mapa mental — El Arte de la Guerra](assets/mapa_mental_arte_de_la_guerra.png)
 
-> Las imágenes del mapa mental están rotuladas en portugués. El mismo contenido, en español, está en [`skills/arte-de-la-guerra/references/mapa-mental.md`](skills/arte-de-la-guerra/references/mapa-mental.md) (Mermaid).
-
-Versión vertical para celular: [`assets/mapa_mental_arte_da_guerra_celular.png`](assets/mapa_mental_arte_da_guerra_celular.png) (1080 px de ancho).
-Para imprimir: [`assets/mapa_mental_arte_da_guerra_A3.pdf`](assets/mapa_mental_arte_da_guerra_A3.pdf) (A3 horizontal, vectorial — imprimir a tamaño real).
+Versión vertical para celular: [`assets/mapa_mental_arte_de_la_guerra_celular.png`](assets/mapa_mental_arte_de_la_guerra_celular.png) (1080 px de ancho).
+Para imprimir: [`assets/mapa_mental_arte_de_la_guerra_A3.pdf`](assets/mapa_mental_arte_de_la_guerra_A3.pdf) (A3 horizontal, vectorial — imprimir a tamaño real).
 
 ## Qué hace la skill
 
@@ -59,11 +57,11 @@ skills/
   arte-de-la-guerra/          # español
     SKILL.md                  # instrucciones de la skill
     references/mapa-mental.md # mapa de los 13 capítulos + traducción a negocios
-assets/                       # mapa mental en PNG y SVG (horizontal y celular) + PDF A3
-scripts/gerar_mapa.py         # genera el SVG/PNG (Python + Chrome headless)
+assets/                       # mapa mental en PNG y SVG (horizontal y celular) + PDF A3, en pt/en/es
+scripts/gerar_mapa.py         # genera el SVG/PNG/PDF (Python + Chrome headless)
 ```
 
-Para regenerar la imagen: `python scripts/gerar_mapa.py` (requiere Google Chrome; ajuste la ruta en `CHROME` si es necesario).
+Para regenerar las imágenes: `python scripts/gerar_mapa.py es` (o `pt`, `en`; sin argumento = todos). Requiere Google Chrome; ajuste la ruta en `CHROME` si es necesario.
 
 ## Fuente
 
