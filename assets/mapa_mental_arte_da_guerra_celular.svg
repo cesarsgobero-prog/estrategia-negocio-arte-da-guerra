@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="4372" font-family="Segoe UI, Arial, sans-serif">
+<rect width="1080" height="4372" fill="#faf7f0"/>
+<rect x="40" y="40" width="1000" height="350" rx="36" fill="#7a1f1f" stroke="#c9a227" stroke-width="10"/>
+<text x="540.0" y="185" text-anchor="middle" font-size="96" font-weight="800" fill="#fff">A Arte da Guerra</text>
+<text x="540.0" y="260" text-anchor="middle" font-size="50" fill="#f3e3a6">Sun Tzu</text>
+<text x="540.0" y="330" text-anchor="middle" font-size="32" fill="#f3e3a6">13 capítulos em um mapa</text>
+<line x1="90" y1="420" x2="90" y2="4242" stroke="#c9a227" stroke-width="8" stroke-linecap="round"/>
+<line x1="90" y1="512" x2="150" y2="512" stroke="hsl(0,62%,42%)" stroke-width="6"/>
+<circle cx="90" cy="512" r="20" fill="hsl(0,62%,42%)" stroke="#faf7f0" stroke-width="6"/>
+<rect x="150" y="470" width="890" height="286" rx="24" fill="hsl(0,70%,97%)" stroke="hsl(0,62%,42%)" stroke-width="4"/>
+<rect x="150" y="470" width="890" height="84" rx="24" fill="hsl(0,62%,42%)"/>
+<rect x="150" y="530" width="890" height="24" fill="hsl(0,62%,42%)"/>
+<text x="180" y="526" font-size="40" font-weight="700" fill="#fff">1 · Planejamento</text>
+<text x="178" y="604" font-size="32" fill="#222" xml:space="preserve">• 5 fatores: Caminho, Céu, Terra, Comandante,</text>
+<text x="178" y="648" font-size="32" fill="#222" xml:space="preserve">   Método</text>
+<text x="178" y="692" font-size="32" fill="#222" xml:space="preserve">• Comparar as forças antes de lutar</text>
+<text x="178" y="736" font-size="32" fill="#222" xml:space="preserve">• Toda guerra se baseia no engano</text>
+<line x1="90" y1="844" x2="150" y2="844" stroke="hsl(27,62%,42%)" stroke-width="6"/>
+<circle cx="90" cy="844" r="20" fill="hsl(27,62%,42%)" stroke="#faf7f0" stroke-width="6"/>
+<rect x="150" y="802" width="890" height="242" rx="24" fill="hsl(27,70%,97%)" stroke="hsl(27,62%,42%)" stroke-width="4"/>
+<rect x="150" y="802" width="890" height="84" rx="24" fill="hsl(27,62%,42%)"/>
+<rect x="150" y="862" width="890" height="24" fill="hsl(27,62%,42%)"/>
+<text x="180" y="858" font-size="40" font-weight="700" fill="#fff">2 · Fazer a guerra</text>
+<text x="178" y="936" font-size="32" fill="#222" xml:space="preserve">• Guerra longa esgota o Estado</text>
+<text x="178" y="980" font-size="32" fill="#222" xml:space="preserve">• Vitória rápida, não campanha longa</text>
+<text x="178" y="1024" font-size="32" fill="#222" xml:space="preserve">• Abastecer-se no território inimigo</text>
+<line x1="90" y1="1132" x2="150" y2="1132" stroke="hsl(55,62%,42%)" stroke-width="6"/>
+<circle cx="90" cy="1132" r="20" fill="hsl(55,62%,42%)" stroke="#faf7f0" stroke-width="6"/>
+<rect x="150" y="1090" width="890" height="286" rx="24" fill="hsl(55,70%,97%)" stroke="hsl(55,62%,42%)" stroke-width="4"/>
+<rect x="150" y="1090" width="890" height="84" rx="24" fill="hsl(55,62%,42%)"/>
+<rect x="150" y="1150" width="890" height="24" fill="hsl(55,62%,42%)"/>
+<text x="180" y="1146" font-size="40" font-weight="700" fill="#fff">3 · Estratégia ofensiva</text>
+<text x="178" y="1224" font-size="32" fill="#222" xml:space="preserve">• Vencer sem lutar é o ideal</text>
+<text x="178" y="1268" font-size="32" fill="#222" xml:space="preserve">• Atacar a estratégia, depois as alianças, o</text>
+<text x="178" y="1312" font-size="32" fill="#222" xml:space="preserve">   exército e, por último, as cidades</text>
+<text x="178" y="1356" font-size="32" fill="#222" xml:space="preserve">• Conhecer o inimigo e a si mesmo</text>
+<line x1="90" y1="1464" x2="150" y2="1464" stroke="hsl(83,62%,42%)" stroke-width="6"/>
+<circle cx="90" cy="1464" r="20" fill="hsl(83,62%,42%)" stroke="#faf7f0" stroke-width="6"/>
+<rect x="150" y="1422" width="890" height="242" rx="24" fill="hsl(83,70%,97%)" stroke="hsl(83,62%,42%)" stroke-width="4"/>
+<rect x="150" y="1422" width="890" height="84" rx="24" fill="hsl(83,62%,42%)"/>
+<rect x="150" y="1482" width="890" height="24" fill="hsl(83,62%,42%)"/>
+<text x="180" y="1478" font-size="40" font-weight="700" fill="#fff">4 · Disposições</text>
+<text x="178" y="1556" font-size="32" fill="#222" xml:space="preserve">• Primeiro tornar-se invencível</text>
+<text x="178" y="1600" font-size="32" fill="#222" xml:space="preserve">• Esperar a vulnerabilidade do inimigo</text>
+<text x="178" y="1644" font-size="32" fill="#222" xml:space="preserve">• Vencer antes de lutar</text>
+<line x1="90" y1="1752" x2="150" y2="1752" stroke="hsl(110,62%,42%)" stroke-width="6"/>
+<circle cx="90" cy="1752" r="20" fill="hsl(110,62%,42%)" stroke="#faf7f0" stroke-width="6"/>
+<rect x="150" y="1710" width="890" height="242" rx="24" fill="hsl(110,70%,97%)" stroke="hsl(110,62%,42%)" stroke-width="4"/>
+<rect x="150" y="1710" width="890" height="84" rx="24" fill="hsl(110,62%,42%)"/>
+<rect x="150" y="1770" width="890" height="24" fill="hsl(110,62%,42%)"/>
+<text x="180" y="1766" font-size="40" font-weight="700" fill="#fff">5 · Energia</text>
+<text x="178" y="1844" font-size="32" fill="#222" xml:space="preserve">• Forças diretas e indiretas</text>
+<text x="178" y="1888" font-size="32" fill="#222" xml:space="preserve">• Combinações infinitas</text>
+<text x="178" y="1932" font-size="32" fill="#222" xml:space="preserve">• Força do conjunto, não do indivíduo</text>
+<line x1="90" y1="2040" x2="150" y2="2040" stroke="hsl(138,62%,42%)" stroke-width="6"/>
+<circle cx="90" cy="2040" r="20" fill="hsl(138,62%,42%)" stroke="#faf7f0" stroke-width="6"/>
+<rect x="150" y="1998" width="890" height="242" rx="24" fill="hsl(138,70%,97%)" stroke="hsl(138,62%,42%)" stroke-width="4"/>
+<rect x="150" y="1998" width="890" height="84" rx="24" fill="hsl(138,62%,42%)"/>
+<rect x="150" y="2058" width="890" height="24" fill="hsl(138,62%,42%)"/>
+<text x="180" y="2054" font-size="40" font-weight="700" fill="#fff">6 · Pontos fortes e fracos</text>
+<text x="178" y="2132" font-size="32" fill="#222" xml:space="preserve">• Chegar primeiro e impor o terreno</text>
+<text x="178" y="2176" font-size="32" fill="#222" xml:space="preserve">• Atacar onde o inimigo não defende</text>
+<text x="178" y="2220" font-size="32" fill="#222" xml:space="preserve">• Adaptar-se como a água</text>
+<line x1="90" y1="2328" x2="150" y2="2328" stroke="hsl(166,62%,42%)" stroke-width="6"/>
+<circle cx="90" cy="2328" r="20" fill="hsl(166,62%,42%)" stroke="#faf7f0" stroke-width="6"/>
+<rect x="150" y="2286" width="890" height="242" rx="24" fill="hsl(166,70%,97%)" stroke="hsl(166,62%,42%)" stroke-width="4"/>
+<rect x="150" y="2286" width="890" height="84" rx="24" fill="hsl(166,62%,42%)"/>
+<rect x="150" y="2346" width="890" height="24" fill="hsl(166,62%,42%)"/>
+<text x="180" y="2342" font-size="40" font-weight="700" fill="#fff">7 · Manobras</text>
+<text x="178" y="2420" font-size="32" fill="#222" xml:space="preserve">• Transformar o desvio em atalho</text>
+<text x="178" y="2464" font-size="32" fill="#222" xml:space="preserve">• Comunicação: bandeiras e tambores</text>
+<text x="178" y="2508" font-size="32" fill="#222" xml:space="preserve">• Não atacar tropas descansadas ou motivadas</text>
+<line x1="90" y1="2616" x2="150" y2="2616" stroke="hsl(193,62%,42%)" stroke-width="6"/>
+<circle cx="90" cy="2616" r="20" fill="hsl(193,62%,42%)" stroke="#faf7f0" stroke-width="6"/>
+<rect x="150" y="2574" width="890" height="242" rx="24" fill="hsl(193,70%,97%)" stroke="hsl(193,62%,42%)" stroke-width="4"/>
+<rect x="150" y="2574" width="890" height="84" rx="24" fill="hsl(193,62%,42%)"/>
+<rect x="150" y="2634" width="890" height="24" fill="hsl(193,62%,42%)"/>
+<text x="180" y="2630" font-size="40" font-weight="700" fill="#fff">8 · Variações táticas</text>
+<text x="178" y="2708" font-size="32" fill="#222" xml:space="preserve">• Há ordens que não se obedecem</text>
+<text x="178" y="2752" font-size="32" fill="#222" xml:space="preserve">• Pesar vantagem e risco</text>
+<text x="178" y="2796" font-size="32" fill="#222" xml:space="preserve">• 5 defeitos fatais do comandante</text>
+<line x1="90" y1="2904" x2="150" y2="2904" stroke="hsl(221,62%,42%)" stroke-width="6"/>
+<circle cx="90" cy="2904" r="20" fill="hsl(221,62%,42%)" stroke="#faf7f0" stroke-width="6"/>
+<rect x="150" y="2862" width="890" height="198" rx="24" fill="hsl(221,70%,97%)" stroke="hsl(221,62%,42%)" stroke-width="4"/>
+<rect x="150" y="2862" width="890" height="84" rx="24" fill="hsl(221,62%,42%)"/>
+<rect x="150" y="2922" width="890" height="24" fill="hsl(221,62%,42%)"/>
+<text x="180" y="2918" font-size="40" font-weight="700" fill="#fff">9 · O exército em marcha</text>
+<text x="178" y="2996" font-size="32" fill="#222" xml:space="preserve">• Ler os sinais do terreno e do inimigo</text>
+<text x="178" y="3040" font-size="32" fill="#222" xml:space="preserve">• Disciplina com humanidade</text>
+<line x1="90" y1="3148" x2="150" y2="3148" stroke="hsl(249,62%,42%)" stroke-width="6"/>
+<circle cx="90" cy="3148" r="20" fill="hsl(249,62%,42%)" stroke="#faf7f0" stroke-width="6"/>
+<rect x="150" y="3106" width="890" height="286" rx="24" fill="hsl(249,70%,97%)" stroke="hsl(249,62%,42%)" stroke-width="4"/>
+<rect x="150" y="3106" width="890" height="84" rx="24" fill="hsl(249,62%,42%)"/>
+<rect x="150" y="3166" width="890" height="24" fill="hsl(249,62%,42%)"/>
+<text x="180" y="3162" font-size="40" font-weight="700" fill="#fff">10 · Terreno</text>
+<text x="178" y="3240" font-size="32" fill="#222" xml:space="preserve">• 6 tipos de terreno</text>
+<text x="178" y="3284" font-size="32" fill="#222" xml:space="preserve">• 6 causas de derrota que são culpa do</text>
+<text x="178" y="3328" font-size="32" fill="#222" xml:space="preserve">   comandante</text>
+<text x="178" y="3372" font-size="32" fill="#222" xml:space="preserve">• Cuidar dos soldados como filhos</text>
+<line x1="90" y1="3480" x2="150" y2="3480" stroke="hsl(276,62%,42%)" stroke-width="6"/>
+<circle cx="90" cy="3480" r="20" fill="hsl(276,62%,42%)" stroke="#faf7f0" stroke-width="6"/>
+<rect x="150" y="3438" width="890" height="242" rx="24" fill="hsl(276,70%,97%)" stroke="hsl(276,62%,42%)" stroke-width="4"/>
+<rect x="150" y="3438" width="890" height="84" rx="24" fill="hsl(276,62%,42%)"/>
+<rect x="150" y="3498" width="890" height="24" fill="hsl(276,62%,42%)"/>
+<text x="180" y="3494" font-size="40" font-weight="700" fill="#fff">11 · As nove situações</text>
+<text x="178" y="3572" font-size="32" fill="#222" xml:space="preserve">• Do terreno disperso ao terreno mortal</text>
+<text x="178" y="3616" font-size="32" fill="#222" xml:space="preserve">• Sem saída, a tropa luta com tudo</text>
+<text x="178" y="3660" font-size="32" fill="#222" xml:space="preserve">• Velocidade e surpresa</text>
+<line x1="90" y1="3768" x2="150" y2="3768" stroke="hsl(304,62%,42%)" stroke-width="6"/>
+<circle cx="90" cy="3768" r="20" fill="hsl(304,62%,42%)" stroke="#faf7f0" stroke-width="6"/>
+<rect x="150" y="3726" width="890" height="242" rx="24" fill="hsl(304,70%,97%)" stroke="hsl(304,62%,42%)" stroke-width="4"/>
+<rect x="150" y="3726" width="890" height="84" rx="24" fill="hsl(304,62%,42%)"/>
+<rect x="150" y="3786" width="890" height="24" fill="hsl(304,62%,42%)"/>
+<text x="180" y="3782" font-size="40" font-weight="700" fill="#fff">12 · Ataque com fogo</text>
+<text x="178" y="3860" font-size="32" fill="#222" xml:space="preserve">• 5 alvos do fogo</text>
+<text x="178" y="3904" font-size="32" fill="#222" xml:space="preserve">• Não agir por raiva</text>
+<text x="178" y="3948" font-size="32" fill="#222" xml:space="preserve">• Mover-se só se houver vantagem</text>
+<line x1="90" y1="4056" x2="150" y2="4056" stroke="hsl(332,62%,42%)" stroke-width="6"/>
+<circle cx="90" cy="4056" r="20" fill="hsl(332,62%,42%)" stroke="#faf7f0" stroke-width="6"/>
+<rect x="150" y="4014" width="890" height="242" rx="24" fill="hsl(332,70%,97%)" stroke="hsl(332,62%,42%)" stroke-width="4"/>
+<rect x="150" y="4014" width="890" height="84" rx="24" fill="hsl(332,62%,42%)"/>
+<rect x="150" y="4074" width="890" height="24" fill="hsl(332,62%,42%)"/>
+<text x="180" y="4070" font-size="40" font-weight="700" fill="#fff">13 · Espiões</text>
+<text x="178" y="4148" font-size="32" fill="#222" xml:space="preserve">• Informação vale mais que batalhas</text>
+<text x="178" y="4192" font-size="32" fill="#222" xml:space="preserve">• 5 tipos de espiões</text>
+<text x="178" y="4236" font-size="32" fill="#222" xml:space="preserve">• O agente duplo é o mais valioso</text>
+<text x="540.0" y="4342" text-anchor="middle" font-size="24" fill="#888">Resumo próprio · texto original em domínio público</text>
+</svg>

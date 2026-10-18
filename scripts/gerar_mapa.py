@@ -105,17 +105,66 @@ def build_svg():
     return "\n".join(parts)
 
 
-def main():
-    svg = OUT_DIR / "mapa_mental_arte_da_guerra.svg"
+def build_svg_vertical():
+    """Phone layout: 1080 px wide, chapters stacked along a vertical spine."""
+    vw, spine, card_x, card_w, wrap = 1080, 90, 150, 890, 46
+    body = []
+    y = 470
+    n = len(CHAPTERS)
+    for i, (title, items) in enumerate(CHAPTERS):
+        hue = int(360 * i / n)
+        color = f"hsl({hue},62%,42%)"
+        lines = []
+        for it in items:
+            wrapped = textwrap.wrap(it, wrap)
+            lines.append("• " + wrapped[0])
+            lines += ["   " + w for w in wrapped[1:]]
+        h = 84 + len(lines) * 44 + 26
+        body += [
+            f'<line x1="{spine}" y1="{y + 42}" x2="{card_x}" y2="{y + 42}" stroke="{color}" stroke-width="6"/>',
+            f'<circle cx="{spine}" cy="{y + 42}" r="20" fill="{color}" stroke="#faf7f0" stroke-width="6"/>',
+            f'<rect x="{card_x}" y="{y}" width="{card_w}" height="{h}" rx="24" fill="hsl({hue},70%,97%)" stroke="{color}" stroke-width="4"/>',
+            f'<rect x="{card_x}" y="{y}" width="{card_w}" height="84" rx="24" fill="{color}"/>',
+            f'<rect x="{card_x}" y="{y + 60}" width="{card_w}" height="24" fill="{color}"/>',
+            f'<text x="{card_x + 30}" y="{y + 56}" font-size="40" font-weight="700" fill="#fff">{esc(title)}</text>',
+        ]
+        ty = y + 84 + 50
+        for text in lines:
+            body.append(f'<text x="{card_x + 28}" y="{ty}" font-size="32" fill="#222" xml:space="preserve">{esc(text)}</text>')
+            ty += 44
+        y += h + 46
+    vh = y + 70
+    head = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{vw}" height="{vh}" font-family="{FONT}">',
+        f'<rect width="{vw}" height="{vh}" fill="#faf7f0"/>',
+        f'<rect x="40" y="40" width="{vw - 80}" height="350" rx="36" fill="#7a1f1f" stroke="#c9a227" stroke-width="10"/>',
+        f'<text x="{vw / 2}" y="185" text-anchor="middle" font-size="96" font-weight="800" fill="#fff">A Arte da Guerra</text>',
+        f'<text x="{vw / 2}" y="260" text-anchor="middle" font-size="50" fill="#f3e3a6">Sun Tzu</text>',
+        f'<text x="{vw / 2}" y="330" text-anchor="middle" font-size="32" fill="#f3e3a6">13 capítulos em um mapa</text>',
+        f'<line x1="{spine}" y1="420" x2="{spine}" y2="{y - 60}" stroke="#c9a227" stroke-width="8" stroke-linecap="round"/>',
+    ]
+    foot = [f'<text x="{vw / 2}" y="{vh - 30}" text-anchor="middle" font-size="24" fill="#888">'
+            'Resumo próprio · texto original em domínio público</text>', "</svg>"]
+    return "\n".join(head + body + foot), vw, vh
+
+
+def render(svg_text, name, w, h):
+    svg = OUT_DIR / f"{name}.svg"
     html = OUT_DIR / "_render.html"
-    png = OUT_DIR / "mapa_mental_arte_da_guerra.png"
-    svg.write_text(build_svg(), encoding="utf-8")
-    html.write_text(f'<body style="margin:0"><img src="{svg.name}" style="display:block;width:{W}px;height:{H}px">',
+    png = OUT_DIR / f"{name}.png"
+    svg.write_text(svg_text, encoding="utf-8")
+    html.write_text(f'<body style="margin:0"><img src="{svg.name}" style="display:block;width:{w}px;height:{h}px">',
                     encoding="utf-8")
     subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars",
-                    f"--window-size={W},{H}", f"--screenshot={png}", html.as_uri()], check=True)
+                    f"--window-size={w},{h}", f"--screenshot={png}", html.as_uri()], check=True)
     html.unlink()
     print(png)
+
+
+def main():
+    render(build_svg(), "mapa_mental_arte_da_guerra", W, H)
+    svg_text, vw, vh = build_svg_vertical()
+    render(svg_text, "mapa_mental_arte_da_guerra_celular", vw, vh)
 
 
 if __name__ == "__main__":

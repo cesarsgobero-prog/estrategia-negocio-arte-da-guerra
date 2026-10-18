@@ -4,6 +4,8 @@ Skill para o [Claude Code](https://claude.com/claude-code) que aplica os princí
 
 ![Mapa mental — A Arte da Guerra](assets/mapa_mental_arte_da_guerra.png)
 
+Versão vertical para celular: [`assets/mapa_mental_arte_da_guerra_celular.png`](assets/mapa_mental_arte_da_guerra_celular.png) (1080 px de largura).
+
 ## O que a skill faz
 
 | Pedido | Resultado |
@@ -47,7 +49,7 @@ Depois, no Claude Code: `/arte-da-guerra` ou peça "o que Sun Tzu faria nessa ne
 skills/arte-da-guerra/
   SKILL.md                    # instruções da skill
   references/mapa-mental.md   # mapa dos 13 capítulos + tradução para negócios
-assets/                       # mapa mental em PNG e SVG
+assets/                       # mapa mental em PNG e SVG (horizontal e celular)
 scripts/gerar_mapa.py         # gera o SVG/PNG (Python + Chrome headless)
 ```
 
